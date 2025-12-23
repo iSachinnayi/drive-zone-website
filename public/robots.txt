@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drivezoneautoparts.ae/sitemap-index.xml
+Sitemap: https://drivezone.ae/sitemap-index.xml
 

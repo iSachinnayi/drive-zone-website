@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://drivezoneautoparts.ae',
+  site: 'https://drivezone.ae',
   integrations: [
     tailwind(),
     sitemap()
