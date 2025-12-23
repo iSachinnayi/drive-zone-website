@@ -5,9 +5,10 @@ const currentYear = new Date().getFullYear();
 
 const quickLinks = [
   { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
   { href: '/services/auto-parts', label: 'Auto Parts' },
   { href: '/services/car-accessories', label: 'Car Accessories' },
-  { href: '/services/delivery', label: 'Delivery Service' },
+  { href: '/reviews', label: 'Reviews' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -26,9 +27,10 @@ const legalLinks = [
       <div class="lg:col-span-1">
         <a href="/" class="inline-block mb-6">
           <img 
-            src="/logo/logo-light.svg" 
+            src="/logo/logo-horizontal-light.svg" 
             alt="Drive Zone Auto Parts - درايف زون" 
-            class="h-20 w-auto"
+            class="h-16 w-auto"
+            loading="lazy"
           />
         </a>
         <p class="text-gray-400 text-sm leading-relaxed mb-6">

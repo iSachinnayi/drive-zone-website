@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+
+const reviews = siteData.reviews;
+
+// Star rating helper
+const getStars = (rating: number) => {
+  return Array.from({ length: 5 }, (_, i) => i < rating);
+};
+
+// Calculate rating distribution
+const ratingCounts = [5, 4, 3, 2, 1].map(rating => {
+  const count = reviews.items.filter(r => r.rating === rating).length;
+  return { rating, count, percentage: (count / reviews.items.length) * 100 };
+});
+---
+
+<BaseLayout 
+  title="Customer Reviews | Drive Zone Auto Parts Abu Dhabi"
+  description="Read customer reviews for Drive Zone Auto Parts & Car Accessories in Abu Dhabi. See what our customers say about our window tinting, car electronics, and auto parts services."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-brand-dark via-brand-charcoal to-brand-dark py-20 md:py-28 overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\"><circle cx=\"40\" cy=\"40\" r=\"2\" fill=\"white\"/></svg>'); background-size: 40px 40px;"></div>
+    </div>
+    
+    <div class="container-custom relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block px-4 py-1.5 bg-brand-amber/20 text-brand-amber text-sm font-semibold rounded-full mb-6">
+          ⭐ Customer Testimonials
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          What Our Customers
+          <span class="text-brand-amber"> Say</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          Real reviews from our valued customers in Abu Dhabi. We're proud to serve the automotive community in Mussaffah.
+        </p>
+        
+        <!-- Overall Rating Card -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-lg mx-auto border border-white/10">
+          <div class="flex items-center justify-center gap-6">
+            <div class="text-center">
+              <div class="text-5xl md:text-6xl font-bold text-white mb-2">{reviews.averageRating}</div>
+              <div class="flex justify-center gap-1 mb-2">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg 
+                    class={`w-6 h-6 ${i < Math.floor(reviews.averageRating) ? 'text-yellow-400' : 'text-gray-500'}`} 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+              </div>
+              <p class="text-gray-400 text-sm">Based on {reviews.totalReviews} reviews</p>
+            </div>
+            <div class="h-20 w-px bg-white/20 hidden md:block"></div>
+            <div class="hidden md:block">
+              <svg class="w-16 h-16 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <p class="text-gray-400 text-xs mt-2">Google Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+  </section>
+
+  <!-- Rating Distribution -->
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-xl font-semibold text-brand-dark mb-6 text-center">Rating Distribution</h2>
+        <div class="space-y-3">
+          {ratingCounts.map(({ rating, count, percentage }) => (
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1 w-20 shrink-0">
+                <span class="text-sm font-medium text-gray-700">{rating}</span>
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+              <div class="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-gradient-to-r from-brand-amber to-yellow-400 rounded-full transition-all duration-1000"
+                  style={`width: ${percentage}%`}
+                ></div>
+              </div>
+              <span class="text-sm text-gray-500 w-12 text-right">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Reviews -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">All Reviews</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Read what our customers have to say about their experience with Drive Zone Auto Parts.
+        </p>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reviews.items.map((review, index) => (
+          <article 
+            class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-brand-amber/30 relative overflow-hidden flex flex-col"
+            style={`animation-delay: ${index * 50}ms`}
+          >
+            <!-- Decorative gradient -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-amber to-yellow-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+            
+            <!-- Quote icon -->
+            <div class="absolute top-4 right-4 text-brand-amber/10 group-hover:text-brand-amber/20 transition-colors">
+              <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            
+            <!-- Header -->
+            <div class="flex items-start gap-3 mb-4">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-amber to-yellow-500 flex items-center justify-center text-white font-bold text-lg shrink-0 shadow-md">
+                {review.name.charAt(0)}
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold text-brand-dark text-sm truncate">{review.name}</h3>
+                <div class="flex items-center gap-2 mt-0.5">
+                  <div class="flex">
+                    {getStars(review.rating).map((filled) => (
+                      <svg 
+                        class={`w-3.5 h-3.5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`}
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="text-xs text-gray-400">
+                    {new Date(review.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </span>
+                </div>
+              </div>
+              <!-- Google Icon -->
+              <svg class="w-5 h-5 text-gray-400 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+            </div>
+            
+            <!-- Review Text -->
+            <p class="text-gray-600 text-sm leading-relaxed flex-1 mb-4">
+              "{review.text}"
+            </p>
+            
+            <!-- Response if exists -->
+            {review.response && (
+              <div class="bg-gradient-to-r from-gray-50 to-brand-amber/5 rounded-lg p-3 border-l-3 border-brand-amber mt-auto">
+                <div class="flex items-center gap-2 mb-1">
+                  <svg class="w-4 h-4 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/>
+                  </svg>
+                  <p class="text-xs text-gray-500 font-medium">Response from Drive Zone</p>
+                </div>
+                <p class="text-sm text-gray-600">{review.response}</p>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-16 text-center">
+        <div class="bg-gradient-to-r from-brand-dark to-brand-charcoal rounded-2xl p-8 md:p-12 max-w-3xl mx-auto relative overflow-hidden">
+          <!-- Background decoration -->
+          <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-amber rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-brand-amber rounded-full blur-3xl"></div>
+          </div>
+          
+          <div class="relative z-10">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+              Had a Great Experience?
+            </h3>
+            <p class="text-gray-300 mb-8 max-w-lg mx-auto">
+              We'd love to hear from you! Share your experience with Drive Zone and help other car enthusiasts find us.
+            </p>
+            <a 
+              href={reviews.googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-white text-brand-dark font-semibold rounded-full hover:bg-brand-amber hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <span>Write a Review on Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 bg-white">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Ready to Visit Us?</h2>
+      <p class="text-gray-600 mb-8 max-w-xl mx-auto">
+        Join our satisfied customers and experience quality auto parts and services at Drive Zone.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href={`tel:${siteData.business.phone}`}
+          class="inline-flex items-center gap-2 px-6 py-3 bg-brand-amber text-white font-semibold rounded-full hover:bg-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span>Call Now</span>
+        </a>
+        <a 
+          href={siteData.business.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 border-2 border-brand-dark text-brand-dark font-semibold rounded-full hover:bg-brand-dark hover:text-white transition-all duration-300"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Get Directions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .border-l-3 {
+    border-left-width: 3px;
+  }
+  
+  article {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+

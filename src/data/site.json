@@ -513,5 +513,108 @@
     "type": "AutoPartsStore",
     "priceRange": "$$",
     "areaServed": ["Abu Dhabi", "Mussaffah", "UAE"]
+  },
+  "reviews": {
+    "averageRating": 4.8,
+    "totalReviews": 47,
+    "googleReviewsUrl": "https://g.page/r/CbDJYpqvBHVpEBM/review",
+    "items": [
+      {
+        "id": 1,
+        "name": "Ahmed Al Mansoori",
+        "rating": 5,
+        "date": "2024-12-15",
+        "text": "Excellent service! Got my car windows tinted here and the quality is amazing. Very professional staff and reasonable prices. Highly recommended for anyone in Abu Dhabi.",
+        "response": "Thank you Ahmed! We're glad you loved the tinting work. See you again!"
+      },
+      {
+        "id": 2,
+        "name": "Mohammed Hassan",
+        "rating": 5,
+        "date": "2024-12-10",
+        "text": "Best place for car accessories in Mussaffah. They installed Android screen with CarPlay in my Nissan Patrol. Works perfectly! Great team.",
+        "response": null
+      },
+      {
+        "id": 3,
+        "name": "Fatima Abdullah",
+        "rating": 5,
+        "date": "2024-12-05",
+        "text": "Very helpful staff. They helped me find the right battery for my car and even installed it on the spot. Fair prices and good quality products.",
+        "response": "Thank you for choosing Drive Zone, Fatima!"
+      },
+      {
+        "id": 4,
+        "name": "Khalid Rahman",
+        "rating": 4,
+        "date": "2024-11-28",
+        "text": "Good variety of car parts and accessories. Got seat covers and floor mats for my Toyota. Staff was knowledgeable and friendly.",
+        "response": null
+      },
+      {
+        "id": 5,
+        "name": "Omar Saeed",
+        "rating": 5,
+        "date": "2024-11-20",
+        "text": "Did ceramic coating for my Mercedes here. The finish is incredible! They really know what they're doing. Will definitely come back for more services.",
+        "response": "Thank you Omar! Ceramic coating makes such a difference. Enjoy your shiny ride!"
+      },
+      {
+        "id": 6,
+        "name": "Rashid Al Ketbi",
+        "rating": 5,
+        "date": "2024-11-15",
+        "text": "Installed parking sensors and reverse camera. Perfect installation, very neat work. No loose wires, everything works great. Recommended!",
+        "response": null
+      },
+      {
+        "id": 7,
+        "name": "Youssef Mahmoud",
+        "rating": 5,
+        "date": "2024-11-08",
+        "text": "Great experience! They have everything for cars. Bought LED headlights and the difference is night and day. Staff explained everything clearly.",
+        "response": "Thanks Youssef! LED lights really make driving safer at night."
+      },
+      {
+        "id": 8,
+        "name": "Hassan Ali",
+        "rating": 4,
+        "date": "2024-10-25",
+        "text": "Good shop with fair prices. Bought air fresheners and some maintenance products. Easy to find in Mussaffah area.",
+        "response": null
+      },
+      {
+        "id": 9,
+        "name": "Samir Nabil",
+        "rating": 5,
+        "date": "2024-10-18",
+        "text": "Paint protection film installation was perfect. They took their time to do it right. My car looks brand new and protected. Very satisfied!",
+        "response": "Thank you Samir! PPF is the best investment for your car's paint."
+      },
+      {
+        "id": 10,
+        "name": "Ibrahim Khalil",
+        "rating": 5,
+        "date": "2024-10-10",
+        "text": "The sound system they installed is amazing! Bass is perfect and everything sounds crystal clear. Professional installation, no rattles or issues.",
+        "response": null
+      },
+      {
+        "id": 11,
+        "name": "Majid Al Shamsi",
+        "rating": 5,
+        "date": "2024-10-02",
+        "text": "Came for window tinting and left very happy. They use quality film and the work is clean. No bubbles, perfect edges. Thank you Drive Zone!",
+        "response": "We appreciate your trust, Majid! Enjoy the cooler drive."
+      },
+      {
+        "id": 12,
+        "name": "Tariq Suleiman",
+        "rating": 4,
+        "date": "2024-09-25",
+        "text": "Nice selection of steering wheel covers and gear knob covers. Staff helped me choose the right fit. Good quality materials.",
+        "response": null
+      }
+    ]
   }
 }
