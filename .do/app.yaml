@@ -1,0 +1,35 @@
+# DigitalOcean App Platform Configuration
+# This file defines the deployment settings for Drive Zone Auto Parts website
+
+name: drive-zone-website
+
+# Static site configuration
+static_sites:
+  - name: drive-zone-web
+    # GitHub repository (update after pushing to GitHub)
+    # github:
+    #   repo: your-username/drive-zone-website
+    #   branch: main
+    
+    # Build settings
+    build_command: npm run build
+    output_dir: dist
+    
+    # Environment
+    environment_slug: node-js
+    
+    # Index document
+    index_document: index.html
+    
+    # Error document (404 page)
+    error_document: 404.html
+    
+    # Routing rules for SPA-like behavior
+    routes:
+      - path: /
+    
+    # Environment variables (if needed)
+    # envs:
+    #   - key: SITE_URL
+    #     value: "https://your-domain.com"
+

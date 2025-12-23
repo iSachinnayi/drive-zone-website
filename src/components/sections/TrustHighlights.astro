@@ -1,0 +1,31 @@
+---
+import siteData from '../../data/site.json';
+
+const icons: Record<string, string> = {
+  'clock': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+  'credit-card': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>`,
+  'truck': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>`
+};
+---
+
+<section class="py-12 -mt-1 bg-white relative z-10">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {siteData.trustHighlights.map((item, index) => (
+        <div 
+          class="flex items-center gap-4 p-6 bg-brand-light-gray rounded-xl hover:shadow-lg transition-all duration-300 group"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="flex-shrink-0 w-14 h-14 bg-brand-amber rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[item.icon]} />
+          </div>
+          <div>
+            <h3 class="font-bold text-brand-dark text-lg">{item.title}</h3>
+            <p class="text-gray-600 text-sm">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+

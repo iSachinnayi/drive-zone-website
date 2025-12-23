@@ -1,0 +1,79 @@
+---
+import siteData from '../../data/site.json';
+
+const icons: Record<string, string> = {
+  'engine': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>`,
+  'car': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 17h8M8 17a2 2 0 11-4 0m4 0a2 2 0 10-4 0m12 0a2 2 0 11-4 0m4 0a2 2 0 10-4 0m-8-5l2-5h8l2 5M4 12h16"/>`,
+  'cpu': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>`,
+  'sparkles': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>`,
+  'delivery': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>`
+};
+
+// Show first 4 services (excluding delivery which is shown separately)
+const displayServices = siteData.services.slice(0, 4);
+---
+
+<section class="section section-light">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+        Our <span class="text-brand-amber">Services</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        From window tinting to car electronics, ceramic coating to quality spare parts — comprehensive automotive solutions for your vehicle.
+      </p>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {displayServices.map((service, index) => (
+        <a 
+          href={`/services/${service.id}`}
+          class="card group hover:-translate-y-2"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="w-14 h-14 bg-brand-amber rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[service.icon]} />
+          </div>
+          
+          <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-amber transition-colors">
+            {service.title}
+          </h3>
+          
+          <p class="text-gray-600 text-sm mb-4">
+            {service.shortDesc}
+          </p>
+          
+          <ul class="space-y-1.5 mb-4">
+            {service.features.slice(0, 3).map(feature => (
+              <li class="flex items-start gap-2 text-xs text-gray-500">
+                <svg class="w-4 h-4 text-brand-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          
+          <span class="inline-flex items-center gap-2 text-brand-amber font-semibold text-sm group-hover:gap-3 transition-all">
+            Learn More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+    
+    <!-- View All Services CTA -->
+    <div class="text-center mt-10">
+      <a href="/services" class="btn btn-secondary">
+        View All Services
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

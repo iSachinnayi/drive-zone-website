@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import TrustHighlights from '../components/sections/TrustHighlights.astro';
+import Categories from '../components/sections/Categories.astro';
+import Services from '../components/sections/Services.astro';
+import WhyChooseUs from '../components/sections/WhyChooseUs.astro';
+import Gallery from '../components/sections/Gallery.astro';
+import BusinessInfo from '../components/sections/BusinessInfo.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import siteData from '../data/site.json';
+
+const { title, description } = siteData.seo.pages.home;
+---
+
+<BaseLayout title={title} description={description}>
+  <Hero />
+  <TrustHighlights />
+  <Categories />
+  <Services />
+  <WhyChooseUs />
+  <Gallery />
+  <BusinessInfo />
+  <FAQ />
+</BaseLayout>
+

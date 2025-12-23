@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="90" viewBox="0 0 320 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Drive Zone Auto Parts - Primary Logo (Dark on Light) with Arabic -->
+  
+  <!-- Icon: Abstract DZ with speed lines -->
+  <g id="icon">
+    <!-- Speed lines -->
+    <rect x="4" y="32" width="16" height="3" rx="1.5" fill="#D4A017"/>
+    <rect x="8" y="40" width="20" height="3" rx="1.5" fill="#D4A017"/>
+    <rect x="4" y="48" width="14" height="3" rx="1.5" fill="#D4A017"/>
+    
+    <!-- Abstract road/motion shape -->
+    <path d="M32 24C32 24 42 29 48 44C54 59 62 64 62 64" stroke="#0F1115" stroke-width="5" stroke-linecap="round"/>
+    <path d="M38 24C38 24 48 29 54 44C60 59 68 64 68 64" stroke="#D4A017" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Arabic Text: درايف زون -->
+  <text x="78" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0F1115" direction="rtl">
+    درايف زون
+  </text>
+  
+  <!-- Primary Text: Drive Zone -->
+  <text x="78" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#0F1115">
+    <tspan>Drive</tspan>
+    <tspan fill="#D4A017"> Zone</tspan>
+  </text>
+  
+  <!-- Secondary Text: Auto Parts -->
+  <text x="78" y="72" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500" fill="#4A4A4A" letter-spacing="1.5">
+    AUTO PARTS & ACCESSORIES
+  </text>
+  
+  <!-- Arabic subtitle -->
+  <text x="270" y="72" font-family="Arial, sans-serif" font-size="10" fill="#4A4A4A" text-anchor="end" direction="rtl">
+    قطع غيار السيارات
+  </text>
+</svg>

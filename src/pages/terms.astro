@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+
+const { title, description } = siteData.seo.pages.terms;
+---
+
+<BaseLayout title={title} description={description} noIndex={true}>
+  <!-- Hero Section -->
+  <section class="bg-brand-dark py-16 relative">
+    <div class="container-custom relative">
+      <nav class="flex items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-brand-amber">Terms of Service</span>
+      </nav>
+      
+      <h1 class="text-3xl md:text-4xl font-bold text-white">
+        Terms of <span class="text-brand-amber">Service</span>
+      </h1>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p class="text-gray-600 mb-8">
+          Last updated: December 2024
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Agreement to Terms</h2>
+        <p class="text-gray-600 mb-6">
+          By visiting our store or using our services, you agree to these Terms of Service. Please read them carefully before making any purchases.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Products and Services</h2>
+        <p class="text-gray-600 mb-4">
+          Drive Zone Auto Parts & Car Accessories provides:
+        </p>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>Auto parts and car accessories for various vehicle makes and models</li>
+          <li>Product consultation and assistance</li>
+          <li>Delivery services within Abu Dhabi (subject to availability)</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Pricing and Payment</h2>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>All prices are in UAE Dirhams (AED)</li>
+          <li>Prices are subject to change without prior notice</li>
+          <li>We accept cash and major credit/debit cards</li>
+          <li>Payment is due at the time of purchase or delivery</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Product Compatibility</h2>
+        <p class="text-gray-600 mb-6">
+          While we make every effort to help you find the right parts for your vehicle, it is your responsibility to verify that products are compatible with your specific vehicle. Please provide accurate vehicle information (make, model, year) when making inquiries.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Returns and Exchanges</h2>
+        <p class="text-gray-600 mb-4">
+          Our return and exchange policy:
+        </p>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>Returns must be requested within a reasonable timeframe</li>
+          <li>Products must be unused, in original packaging</li>
+          <li>Electrical parts and installed items may not be eligible for return</li>
+          <li>Proof of purchase is required</li>
+          <li>Contact us to discuss specific return requests</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Delivery Service</h2>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>Delivery is available within Abu Dhabi</li>
+          <li>Delivery charges may apply based on location</li>
+          <li>Delivery times are estimates and may vary</li>
+          <li>Customer must be available to receive delivery</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Limitation of Liability</h2>
+        <p class="text-gray-600 mb-6">
+          Drive Zone Auto Parts shall not be liable for any damages arising from the use or inability to use products purchased from us, beyond the cost of the product itself. We recommend professional installation for complex parts.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Contact Information</h2>
+        <p class="text-gray-600 mb-4">
+          For questions about these terms:
+        </p>
+        <ul class="list-none text-gray-600 mb-6 space-y-2">
+          <li><strong>Phone:</strong> {siteData.business.phoneDisplay}</li>
+          <li><strong>Address:</strong> {siteData.business.address.full}</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Governing Law</h2>
+        <p class="text-gray-600">
+          These terms are governed by the laws of the United Arab Emirates. Any disputes shall be resolved in the courts of Abu Dhabi, UAE.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

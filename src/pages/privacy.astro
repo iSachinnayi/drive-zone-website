@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+
+const { title, description } = siteData.seo.pages.privacy;
+---
+
+<BaseLayout title={title} description={description} noIndex={true}>
+  <!-- Hero Section -->
+  <section class="bg-brand-dark py-16 relative">
+    <div class="container-custom relative">
+      <nav class="flex items-center gap-2 text-sm text-gray-400 mb-4">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-brand-amber">Privacy Policy</span>
+      </nav>
+      
+      <h1 class="text-3xl md:text-4xl font-bold text-white">
+        Privacy <span class="text-brand-amber">Policy</span>
+      </h1>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p class="text-gray-600 mb-8">
+          Last updated: December 2024
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Introduction</h2>
+        <p class="text-gray-600 mb-6">
+          Drive Zone Auto Parts & Car Accessories ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our store or use our services.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Information We Collect</h2>
+        <p class="text-gray-600 mb-4">
+          We may collect the following types of information:
+        </p>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>Contact information (name, phone number) when you make inquiries</li>
+          <li>Vehicle information when you request specific parts</li>
+          <li>Delivery address if you use our delivery service</li>
+          <li>Payment information for transactions (processed securely)</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">How We Use Your Information</h2>
+        <p class="text-gray-600 mb-4">
+          We use your information to:
+        </p>
+        <ul class="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+          <li>Process your orders and provide customer service</li>
+          <li>Respond to your inquiries about products</li>
+          <li>Deliver products to your specified location</li>
+          <li>Process payments securely</li>
+          <li>Improve our services</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Information Security</h2>
+        <p class="text-gray-600 mb-6">
+          We implement appropriate security measures to protect your personal information. Payment transactions are processed through secure payment processors, and we do not store your full payment card details.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Third-Party Services</h2>
+        <p class="text-gray-600 mb-6">
+          Our website may contain links to third-party services (such as Google Maps for directions and WhatsApp for messaging). These services have their own privacy policies, and we encourage you to review them.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Your Rights</h2>
+        <p class="text-gray-600 mb-6">
+          You have the right to access, correct, or delete your personal information. If you have any questions about your data or wish to exercise these rights, please contact us.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Contact Us</h2>
+        <p class="text-gray-600 mb-4">
+          If you have questions about this Privacy Policy, please contact us:
+        </p>
+        <ul class="list-none text-gray-600 mb-6 space-y-2">
+          <li><strong>Phone:</strong> {siteData.business.phoneDisplay}</li>
+          <li><strong>Address:</strong> {siteData.business.address.full}</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-brand-dark mb-4">Changes to This Policy</h2>
+        <p class="text-gray-600">
+          We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

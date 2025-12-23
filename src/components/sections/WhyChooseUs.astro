@@ -1,0 +1,66 @@
+---
+import siteData from '../../data/site.json';
+
+const icons: Record<string, string> = {
+  'shield-check': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`,
+  'store': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>`,
+  'wallet': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>`,
+  'headset': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>`,
+  'clock-fast': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+  'truck-delivery': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>`
+};
+---
+
+<section class="section section-dark relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23D4A017\" fill-opacity=\"0.8\"%3E%3Cpath d=\"M20 20.5V18H0v-2h20v-2l4 3.25-4 3.25zM0 20h20v2H0v-2z\"/%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  
+  <div class="container-custom relative">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Why Choose <span class="text-brand-amber">Drive Zone</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        We're committed to providing the best auto parts shopping experience in Abu Dhabi
+      </p>
+    </div>
+    
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {siteData.whyChooseUs.map((item, index) => (
+        <div 
+          class="card-dark group hover:bg-brand-amber/10 transition-all duration-300"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-brand-amber/20 rounded-lg flex items-center justify-center group-hover:bg-brand-amber transition-colors">
+              <svg class="w-6 h-6 text-brand-amber group-hover:text-brand-dark transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[item.icon]} />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                {item.title}
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a href="/about" class="btn btn-primary">
+        Learn More About Us
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+

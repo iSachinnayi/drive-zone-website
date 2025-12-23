@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Drive Zone Favicon -->
+  <rect width="32" height="32" rx="6" fill="#0F1115"/>
+  
+  <!-- Speed lines -->
+  <rect x="3" y="11" width="6" height="2" rx="1" fill="#D4A017"/>
+  <rect x="4" y="15" width="8" height="2" rx="1" fill="#D4A017"/>
+  <rect x="3" y="19" width="5" height="2" rx="1" fill="#D4A017"/>
+  
+  <!-- Motion curve -->
+  <path d="M12 7C12 7 18 10 22 16C26 22 29 25 29 25" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M14 7C14 7 20 10 24 16C28 22 29 25 29 25" stroke="#D4A017" stroke-width="2" stroke-linecap="round"/>
+</svg>
+

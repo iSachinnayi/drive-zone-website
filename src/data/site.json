@@ -1,0 +1,517 @@
+{
+  "business": {
+    "name": "Drive Zone Auto Parts & Car Accessories",
+    "shortName": "Drive Zone",
+    "tagline": "Your Trusted Auto Parts Partner in Abu Dhabi",
+    "description": "Professional auto parts and car accessories store in Abu Dhabi, UAE. Quality products, expert service, and fast delivery available.",
+    "phone": "+971527064648",
+    "phoneDisplay": "+971 52 706 4648",
+    "whatsapp": "971527064648",
+    "email": "info@drivezoneautoparts.ae",
+    "address": {
+      "street": "Al Marmouyiah Street",
+      "area": "Mussaffah 6",
+      "city": "Abu Dhabi",
+      "country": "UAE",
+      "full": "Al Marmouyiah Street, Mussaffah 6, Abu Dhabi, UAE"
+    },
+    "coordinates": {
+      "lat": "24.3547",
+      "lng": "54.5024"
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=Drive+Zone+Auto+Parts+Mussaffah+Abu+Dhabi",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.123!2d54.5024!3d24.3547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDIxJzE3LjAiTiA1NMKwMzAnMDguNiJF!5e0!3m2!1sen!2sae!4v1"
+  },
+  "hours": {
+    "display": [
+      { "days": "Sunday - Wednesday", "time": "08:00 - 22:00" },
+      { "days": "Thursday", "time": "08:30 - 22:00" },
+      { "days": "Friday", "time": "08:00 - 12:00, 15:00 - 22:00" },
+      { "days": "Saturday", "time": "08:00 - 22:00" }
+    ],
+    "schema": [
+      "Su 08:00-22:00",
+      "Mo 08:00-22:00",
+      "Tu 08:00-22:00",
+      "We 08:00-22:00",
+      "Th 08:30-22:00",
+      "Fr 08:00-12:00",
+      "Fr 15:00-22:00",
+      "Sa 08:00-22:00"
+    ]
+  },
+  "payments": {
+    "accepted": ["Cash", "Visa", "Mastercard", "American Express", "UnionPay", "Discover", "JCB", "Debit Cards", "NFC Mobile Payments"],
+    "icons": ["visa", "mastercard", "amex", "unionpay"]
+  },
+  "features": {
+    "delivery": true,
+    "cardPayments": true,
+    "openDaily": true,
+    "inStorePickup": true,
+    "inStoreShopping": true
+  },
+  "hero": {
+    "headline": "Professional Auto Parts & Car Accessories in Abu Dhabi",
+    "subheadline": "Window tinting, ceramic coating, car electronics, seat covers, and quality spare parts. Visit us in Mussaffah!",
+    "ctaPrimary": {
+      "text": "Call Now",
+      "icon": "phone"
+    },
+    "ctaSecondary": {
+      "text": "Get Directions",
+      "icon": "map"
+    }
+  },
+  "trustHighlights": [
+    {
+      "icon": "clock",
+      "title": "Open 7 Days",
+      "description": "Convenient hours every day of the week"
+    },
+    {
+      "icon": "credit-card",
+      "title": "All Payments",
+      "description": "Cash, cards & NFC payments accepted"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery Available",
+      "description": "Parts delivered across Abu Dhabi"
+    }
+  ],
+  "serviceCategories": [
+    {
+      "id": "car-enhancement",
+      "title": "Car Enhancement Services",
+      "shortDesc": "Professional vehicle enhancement and protection services",
+      "icon": "sparkles",
+      "color": "amber",
+      "services": [
+        {
+          "name": "Window Tinting",
+          "description": "Professional car window tinting for privacy, UV protection, and heat reduction"
+        },
+        {
+          "name": "Car Polishing",
+          "description": "Restore your car's shine with professional polishing services"
+        },
+        {
+          "name": "Ceramic Coating",
+          "description": "Long-lasting paint protection with premium ceramic coating"
+        },
+        {
+          "name": "Paint Protection Film (PPF)",
+          "description": "Invisible film to protect your car's paint from scratches and chips"
+        }
+      ]
+    },
+    {
+      "id": "electronics",
+      "title": "Car Electronics & Technology",
+      "shortDesc": "Modern technology upgrades for your vehicle",
+      "icon": "cpu",
+      "color": "blue",
+      "services": [
+        {
+          "name": "Android Screens with CarPlay",
+          "description": "Upgrade to modern android screens with Apple CarPlay integration"
+        },
+        {
+          "name": "Car Music Systems",
+          "description": "Premium audio systems for superior sound quality"
+        },
+        {
+          "name": "Sound Systems & Subwoofers",
+          "description": "Complete sound system installation including subwoofers"
+        },
+        {
+          "name": "Camera Fittings",
+          "description": "Reverse cameras, dash cams, and 360° camera systems"
+        },
+        {
+          "name": "Key Remote Setups",
+          "description": "Car key programming and remote setup services"
+        },
+        {
+          "name": "Parking Sensors",
+          "description": "Front and rear parking sensor installation"
+        }
+      ]
+    },
+    {
+      "id": "interior",
+      "title": "Interior Accessories",
+      "shortDesc": "Upgrade your car's interior comfort and style",
+      "icon": "seat",
+      "color": "purple",
+      "services": [
+        {
+          "name": "Seat Covers",
+          "description": "Custom and universal seat covers in various materials"
+        },
+        {
+          "name": "Steering Covers",
+          "description": "Stylish and comfortable steering wheel covers"
+        },
+        {
+          "name": "Gear Covers",
+          "description": "Protective and decorative gear shift covers"
+        },
+        {
+          "name": "Car Mats",
+          "description": "Floor mats in rubber, carpet, and premium materials"
+        },
+        {
+          "name": "Upholstery",
+          "description": "Custom upholstery and interior trim services"
+        },
+        {
+          "name": "Air Fresheners",
+          "description": "Wide range of car air fresheners and scent diffusers"
+        }
+      ]
+    },
+    {
+      "id": "exterior",
+      "title": "Exterior Accessories",
+      "shortDesc": "Enhance your car's appearance and functionality",
+      "icon": "car",
+      "color": "red",
+      "services": [
+        {
+          "name": "LED Headlights",
+          "description": "Upgrade to bright, energy-efficient LED headlights"
+        },
+        {
+          "name": "Body Kits",
+          "description": "Stylish body kits to transform your car's look"
+        },
+        {
+          "name": "Chrome Trims",
+          "description": "Decorative chrome trims and accessories"
+        },
+        {
+          "name": "Side Mirrors",
+          "description": "Replacement and upgrade mirrors with added features"
+        }
+      ]
+    },
+    {
+      "id": "maintenance",
+      "title": "Maintenance Products",
+      "shortDesc": "Essential car care and maintenance supplies",
+      "icon": "wrench",
+      "color": "green",
+      "services": [
+        {
+          "name": "Tyre Polish",
+          "description": "Keep your tyres looking new with quality tyre polish"
+        },
+        {
+          "name": "Dashboard Polish",
+          "description": "Interior dashboard cleaning and polishing products"
+        },
+        {
+          "name": "Spray Paints",
+          "description": "Automotive spray paints for touch-ups and repairs"
+        },
+        {
+          "name": "Coolant",
+          "description": "Engine coolant for optimal temperature regulation"
+        },
+        {
+          "name": "Brake Oil",
+          "description": "Quality brake fluid for safe braking performance"
+        },
+        {
+          "name": "Lubricants",
+          "description": "Engine oils, greases, and automotive lubricants"
+        },
+        {
+          "name": "Injection Cleaners",
+          "description": "Fuel injection cleaning solutions"
+        },
+        {
+          "name": "Stop Smoke Solutions",
+          "description": "Additives to reduce engine smoke and emissions"
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "title": "Vehicle Parts",
+      "shortDesc": "Quality replacement parts for all vehicle makes",
+      "icon": "cog",
+      "color": "gray",
+      "services": [
+        {
+          "name": "Car Batteries",
+          "description": "Reliable car batteries from trusted brands"
+        },
+        {
+          "name": "Air Filters",
+          "description": "Engine air filters for clean air intake"
+        },
+        {
+          "name": "AC Filters",
+          "description": "Cabin air filters for fresh interior air"
+        },
+        {
+          "name": "Brake Pads",
+          "description": "Quality brake pads for safe stopping power"
+        },
+        {
+          "name": "Fan Belts",
+          "description": "Serpentine belts and fan belts for all vehicles"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "auto-parts",
+      "title": "Auto Parts",
+      "shortDesc": "Quality replacement parts for all vehicle makes and models",
+      "description": "We stock a comprehensive range of automotive parts including batteries, filters, brake pads, fan belts, and more. Our team helps you find the right parts for your vehicle.",
+      "icon": "engine",
+      "features": [
+        "Car batteries from trusted brands",
+        "Air filters & AC filters",
+        "Brake pads & brake components",
+        "Fan belts & serpentine belts",
+        "Coolant & brake oil",
+        "Lubricants & engine oils"
+      ]
+    },
+    {
+      "id": "car-accessories",
+      "title": "Car Accessories",
+      "shortDesc": "Interior and exterior accessories to enhance your vehicle",
+      "description": "Transform your vehicle with our wide selection of car accessories. From seat covers and car mats to LED headlights and body kits, we have everything to personalize your ride.",
+      "icon": "car",
+      "features": [
+        "Seat covers & upholstery",
+        "Steering & gear covers",
+        "Car mats & floor liners",
+        "LED headlights & lighting",
+        "Body kits & chrome trims",
+        "Air fresheners & car care"
+      ]
+    },
+    {
+      "id": "car-electronics",
+      "title": "Car Electronics",
+      "shortDesc": "Modern technology and entertainment upgrades",
+      "description": "Upgrade your driving experience with the latest car electronics. Android screens with CarPlay, premium sound systems, parking sensors, and camera fittings.",
+      "icon": "cpu",
+      "features": [
+        "Android screens with CarPlay",
+        "Car music systems & subwoofers",
+        "Parking sensors installation",
+        "Camera fittings (reverse, dash, 360°)",
+        "Key remote setups",
+        "Sound system upgrades"
+      ]
+    },
+    {
+      "id": "car-services",
+      "title": "Car Services",
+      "shortDesc": "Professional vehicle enhancement services",
+      "description": "Professional car enhancement services including window tinting, ceramic coating, paint protection film, and car polishing to protect and beautify your vehicle.",
+      "icon": "sparkles",
+      "features": [
+        "Window tinting services",
+        "Ceramic coating application",
+        "Paint protection film (PPF)",
+        "Car polishing & detailing",
+        "Upholstery services",
+        "Custom installations"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery Service",
+      "shortDesc": "Convenient delivery of parts to your location in Abu Dhabi",
+      "description": "Can't make it to our store? We offer delivery services across Abu Dhabi. Order your parts and have them delivered to your home, office, or garage.",
+      "icon": "delivery",
+      "features": [
+        "Abu Dhabi wide delivery",
+        "Same-day delivery available",
+        "Safe & secure packaging",
+        "Order confirmation via WhatsApp",
+        "Contactless delivery option",
+        "Business & wholesale orders"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Window Tinting",
+      "icon": "sun",
+      "description": "Professional tinting services"
+    },
+    {
+      "name": "Car Electronics",
+      "icon": "cpu",
+      "description": "CarPlay, screens & sound systems"
+    },
+    {
+      "name": "Seat Covers",
+      "icon": "seat",
+      "description": "Custom & universal covers"
+    },
+    {
+      "name": "Ceramic Coating",
+      "icon": "sparkles",
+      "description": "Paint protection & shine"
+    },
+    {
+      "name": "LED Lighting",
+      "icon": "lightbulb",
+      "description": "Headlights & accessories"
+    },
+    {
+      "name": "Car Parts",
+      "icon": "cog",
+      "description": "Batteries, filters & more"
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Wide Range of Services",
+      "description": "From window tinting to car electronics, we offer comprehensive automotive solutions",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Local Abu Dhabi Store",
+      "description": "Visit us in Mussaffah for personalized service and expert advice",
+      "icon": "store"
+    },
+    {
+      "title": "Easy Payments",
+      "description": "Cash, cards, and NFC mobile payments accepted",
+      "icon": "wallet"
+    },
+    {
+      "title": "Expert Installation",
+      "description": "Professional installation services for electronics and accessories",
+      "icon": "headset"
+    },
+    {
+      "title": "Quality Products",
+      "description": "We source from trusted suppliers for reliable performance",
+      "icon": "clock-fast"
+    },
+    {
+      "title": "Delivery Available",
+      "description": "Can't visit? We deliver parts across Abu Dhabi",
+      "icon": "truck-delivery"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What services do you offer?",
+      "answer": "We offer a wide range of services including window tinting, ceramic coating, paint protection film, car polishing, android screen installation with CarPlay, sound systems, seat covers, car mats, LED headlights, body kits, and much more."
+    },
+    {
+      "question": "Do you offer delivery?",
+      "answer": "Yes, we offer delivery services across Abu Dhabi. Contact us via phone or WhatsApp to arrange delivery of your parts and accessories."
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "answer": "We accept cash and all major credit and debit cards including Visa, Mastercard, American Express, UnionPay, Discover, and JCB. We also accept NFC mobile payments."
+    },
+    {
+      "question": "Do you install car electronics?",
+      "answer": "Yes, we provide professional installation services for android screens with CarPlay, sound systems, parking sensors, cameras, and other car electronics."
+    },
+    {
+      "question": "Do you stock parts for multiple car brands?",
+      "answer": "Yes, we carry parts and accessories for a wide range of vehicle makes and models. Contact us with your vehicle details and we'll help you find what you need."
+    },
+    {
+      "question": "Are you open on Fridays?",
+      "answer": "Yes, we are open on Fridays from 08:00-12:00 and again from 15:00-22:00."
+    },
+    {
+      "question": "Can I get window tinting done at your shop?",
+      "answer": "Yes, we offer professional car window tinting services. Visit our store or call us to schedule an appointment."
+    },
+    {
+      "question": "Where is your store located?",
+      "answer": "We are located on Al Marmouyiah Street in Mussaffah 6, Abu Dhabi. Click 'Get Directions' for navigation assistance."
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/images/store-front.webp",
+      "alt": "Drive Zone Auto Parts store front in Mussaffah, Abu Dhabi",
+      "caption": "Our store in Mussaffah 6"
+    }
+  ],
+  "seo": {
+    "defaults": {
+      "titleTemplate": "%s | Drive Zone Auto Parts Abu Dhabi",
+      "defaultTitle": "Drive Zone Auto Parts & Car Accessories | Abu Dhabi UAE",
+      "defaultDescription": "Quality auto parts and car accessories in Abu Dhabi. Window tinting, ceramic coating, car electronics, seat covers & more. Visit Drive Zone in Mussaffah. Delivery available.",
+      "keywords": ["auto parts Abu Dhabi", "car accessories UAE", "window tinting Abu Dhabi", "ceramic coating Mussaffah", "car electronics UAE", "seat covers Abu Dhabi", "Drive Zone", "automotive store UAE"]
+    },
+    "pages": {
+      "home": {
+        "title": "Drive Zone Auto Parts & Car Accessories | Abu Dhabi UAE",
+        "description": "Quality auto parts and car accessories in Abu Dhabi. Window tinting, ceramic coating, car electronics, seat covers & more. Visit Drive Zone in Mussaffah. Delivery available."
+      },
+      "services": {
+        "title": "Our Services",
+        "description": "Complete range of automotive services in Abu Dhabi. Window tinting, ceramic coating, car electronics, accessories installation, and quality spare parts at Drive Zone Mussaffah."
+      },
+      "auto-parts": {
+        "title": "Auto Parts",
+        "description": "Quality replacement auto parts in Abu Dhabi. Batteries, filters, brake pads, fan belts & more. Visit Drive Zone in Mussaffah or call for delivery."
+      },
+      "car-accessories": {
+        "title": "Car Accessories",
+        "description": "Car accessories in Abu Dhabi. Seat covers, car mats, LED headlights, body kits and styling accessories. Visit Drive Zone Mussaffah."
+      },
+      "car-electronics": {
+        "title": "Car Electronics & Technology",
+        "description": "Car electronics in Abu Dhabi. Android screens with CarPlay, sound systems, parking sensors, camera fittings. Professional installation at Drive Zone."
+      },
+      "car-services": {
+        "title": "Car Enhancement Services",
+        "description": "Professional car services in Abu Dhabi. Window tinting, ceramic coating, paint protection film, car polishing at Drive Zone Mussaffah."
+      },
+      "delivery": {
+        "title": "Parts Delivery Service",
+        "description": "Auto parts delivery in Abu Dhabi. Order car parts and accessories from Drive Zone and get them delivered to your location."
+      },
+      "about": {
+        "title": "About Us",
+        "description": "Learn about Drive Zone Auto Parts & Car Accessories - your trusted automotive parts store in Mussaffah, Abu Dhabi, UAE."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "Contact Drive Zone Auto Parts in Abu Dhabi. Call +971 52 706 4648 or visit us in Mussaffah 6. Directions, hours, and WhatsApp available."
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": "Privacy policy for Drive Zone Auto Parts & Car Accessories website."
+      },
+      "terms": {
+        "title": "Terms of Service",
+        "description": "Terms of service for Drive Zone Auto Parts & Car Accessories."
+      }
+    }
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": ""
+  },
+  "schema": {
+    "type": "AutoPartsStore",
+    "priceRange": "$$",
+    "areaServed": ["Abu Dhabi", "Mussaffah", "UAE"]
+  }
+}

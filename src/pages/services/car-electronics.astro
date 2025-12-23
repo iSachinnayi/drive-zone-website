@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import siteData from '../../data/site.json';
+
+const service = siteData.services.find(s => s.id === 'car-electronics');
+const category = siteData.serviceCategories.find(c => c.id === 'electronics');
+const { title, description } = siteData.seo.pages['car-electronics'];
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="bg-brand-dark py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-charcoal to-brand-dark"></div>
+    <div class="absolute top-10 left-0 w-64 h-1 bg-gradient-to-r from-blue-500 to-transparent opacity-30"></div>
+    <div class="absolute bottom-10 right-0 w-48 h-1 bg-gradient-to-l from-blue-500 to-transparent opacity-30"></div>
+    
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <nav class="flex items-center gap-2 text-sm text-gray-400 mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-blue-400">Car Electronics</span>
+        </nav>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Car <span class="text-blue-400">Electronics & Technology</span>
+        </h1>
+        
+        <p class="text-xl text-gray-300 mb-8">
+          {service?.description}
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={`tel:${siteData.business.phone}`} class="btn bg-blue-500 text-white hover:bg-blue-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Call for Installation
+          </a>
+          <a href={`https://wa.me/${siteData.business.whatsapp}`} target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
+            WhatsApp Inquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Grid -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold text-brand-dark mb-8">
+        Electronics & Technology <span class="text-blue-500">Services</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {category?.services.map(item => (
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">{item.name}</h3>
+            <p class="text-gray-600 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="section section-light">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-brand-dark mb-6">
+            Why Choose Our <span class="text-blue-500">Installation Services</span>
+          </h2>
+          
+          <ul class="space-y-4">
+            {service?.features.map(feature => (
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-0.5">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-gray-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="card border-l-4 border-blue-500">
+            <h3 class="font-bold text-brand-dark text-lg mb-2">Professional Installation</h3>
+            <p class="text-gray-600">Our experienced technicians ensure proper installation of all electronic components for optimal performance.</p>
+          </div>
+          
+          <div class="card border-l-4 border-blue-500">
+            <h3 class="font-bold text-brand-dark text-lg mb-2">Quality Products</h3>
+            <p class="text-gray-600">We stock electronics from trusted brands to ensure reliability and compatibility with your vehicle.</p>
+          </div>
+          
+          <div class="card border-l-4 border-blue-500">
+            <h3 class="font-bold text-brand-dark text-lg mb-2">Expert Advice</h3>
+            <p class="text-gray-600">Not sure what you need? Our team can recommend the best electronics for your vehicle and budget.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section bg-blue-600">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        Upgrade Your Car's Technology
+      </h2>
+      <p class="text-blue-100 mb-8 max-w-xl mx-auto">
+        Visit our store for professional installation of car screens, sound systems, cameras, and more.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href={`tel:${siteData.business.phone}`} class="btn bg-white text-blue-600 hover:bg-gray-100">
+          Call: {siteData.business.phoneDisplay}
+        </a>
+        <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-blue-600">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
